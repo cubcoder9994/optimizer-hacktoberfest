@@ -17,7 +17,15 @@ class Codechef
 		{
 		    arr[i] = sc.nextInt();
 		}
-		HashMap<Integer,Integer> hm = new HashMap<>();
+		int xor = 0;
+		for(int i=0;i<n;i++)
+		{
+			xor = xor^arr[i];
+		}
+		// Since xor of two same numbers is 0, this property can be used to find which number does not have a duplicate number in the array.
+
+		System.out.println("The single number is : "+xor);
+		/*HashMap<Integer,Integer> hm = new HashMap<>();
 		for(int i=0;i<n;i++)
 		{
 		    if(hm.containsKey(i))
@@ -32,6 +40,6 @@ class Codechef
 		        System.out.println(i);
 		        break;
 		    }
-		}
+		}*/
 	}
 }
